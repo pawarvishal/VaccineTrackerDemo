@@ -5,15 +5,19 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{9A5CD946-B2C4-4902-8819-F258CDDF0876}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.Common", "VaccineTrackerDemo.Common\VaccineTrackerDemo.Common.csproj", "{D578174C-FFE2-40C5-B43B-FC4975E698F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineTrackerDemo.Common", "VaccineTrackerDemo.Common\VaccineTrackerDemo.Common.csproj", "{D578174C-FFE2-40C5-B43B-FC4975E698F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.DataAccess", "VaccineTrackerDemo.DataAccess\VaccineTrackerDemo.DataAccess.csproj", "{074D1A87-3518-41D6-9C2E-52EC81919518}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineTrackerDemo.DataAccess", "VaccineTrackerDemo.DataAccess\VaccineTrackerDemo.DataAccess.csproj", "{074D1A87-3518-41D6-9C2E-52EC81919518}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForms", "WinForms", "{3AE9EDCB-43EE-4B26-AA0F-A50EBFAC83C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.WinForms", "VaccineTrackerDemo.WinForms\VaccineTrackerDemo.WinForms.csproj", "{C969AFF6-7C74-4146-9928-14419D148AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineTrackerDemo.WinForms", "VaccineTrackerDemo.WinForms\VaccineTrackerDemo.WinForms.csproj", "{C969AFF6-7C74-4146-9928-14419D148AB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.ViewModel", "VaccineTrackerDemo.ViewModel\VaccineTrackerDemo.ViewModel.csproj", "{30F9C05E-5A91-4101-B441-E7641BC90BDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineTrackerDemo.ViewModel", "VaccineTrackerDemo.ViewModel\VaccineTrackerDemo.ViewModel.csproj", "{30F9C05E-5A91-4101-B441-E7641BC90BDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF3CF428-8A6F-45A3-A8EE-5B7547C3021F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemoTests", "VaccineTrackerDemoTests\VaccineTrackerDemoTests.csproj", "{0734FAFB-D05B-46A6-BD74-277A4E291A23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0734FAFB-D05B-46A6-BD74-277A4E291A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0734FAFB-D05B-46A6-BD74-277A4E291A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0734FAFB-D05B-46A6-BD74-277A4E291A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0734FAFB-D05B-46A6-BD74-277A4E291A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{074D1A87-3518-41D6-9C2E-52EC81919518} = {9A5CD946-B2C4-4902-8819-F258CDDF0876}
 		{C969AFF6-7C74-4146-9928-14419D148AB7} = {3AE9EDCB-43EE-4B26-AA0F-A50EBFAC83C7}
 		{30F9C05E-5A91-4101-B441-E7641BC90BDE} = {9A5CD946-B2C4-4902-8819-F258CDDF0876}
+		{0734FAFB-D05B-46A6-BD74-277A4E291A23} = {AF3CF428-8A6F-45A3-A8EE-5B7547C3021F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C69DC48A-48CA-4A21-B06E-D5217CD87CC7}
