@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{9A5CD946-B2C4-4902-8819-F258CDDF0876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.Common", "VaccineTrackerDemo.Common\VaccineTrackerDemo.Common.csproj", "{D578174C-FFE2-40C5-B43B-FC4975E698F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.DataAccess", "VaccineTrackerDemo.DataAccess\VaccineTrackerDemo.DataAccess.csproj", "{074D1A87-3518-41D6-9C2E-52EC81919518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForms", "WinForms", "{3AE9EDCB-43EE-4B26-AA0F-A50EBFAC83C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.WinForms", "VaccineTrackerDemo.WinForms\VaccineTrackerDemo.WinForms.csproj", "{C969AFF6-7C74-4146-9928-14419D148AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineTrackerDemo.ViewModel", "VaccineTrackerDemo.ViewModel\VaccineTrackerDemo.ViewModel.csproj", "{30F9C05E-5A91-4101-B441-E7641BC90BDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D578174C-FFE2-40C5-B43B-FC4975E698F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D578174C-FFE2-40C5-B43B-FC4975E698F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D578174C-FFE2-40C5-B43B-FC4975E698F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D578174C-FFE2-40C5-B43B-FC4975E698F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074D1A87-3518-41D6-9C2E-52EC81919518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074D1A87-3518-41D6-9C2E-52EC81919518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074D1A87-3518-41D6-9C2E-52EC81919518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074D1A87-3518-41D6-9C2E-52EC81919518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C969AFF6-7C74-4146-9928-14419D148AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C969AFF6-7C74-4146-9928-14419D148AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C969AFF6-7C74-4146-9928-14419D148AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C969AFF6-7C74-4146-9928-14419D148AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F9C05E-5A91-4101-B441-E7641BC90BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D578174C-FFE2-40C5-B43B-FC4975E698F6} = {9A5CD946-B2C4-4902-8819-F258CDDF0876}
+		{074D1A87-3518-41D6-9C2E-52EC81919518} = {9A5CD946-B2C4-4902-8819-F258CDDF0876}
+		{C969AFF6-7C74-4146-9928-14419D148AB7} = {3AE9EDCB-43EE-4B26-AA0F-A50EBFAC83C7}
+		{30F9C05E-5A91-4101-B441-E7641BC90BDE} = {9A5CD946-B2C4-4902-8819-F258CDDF0876}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C69DC48A-48CA-4A21-B06E-D5217CD87CC7}
+	EndGlobalSection
+EndGlobal
