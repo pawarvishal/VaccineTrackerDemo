@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using VaccineTrackerDemo.Common.DataProvider;
+using VaccineTrackerDemo.Common.Model;
 using VaccineTrackerDemo.DataAccess;
 using VaccineTrackerDemo.ViewModel;
 
@@ -8,11 +10,13 @@ namespace VaccineTrackerDemo.WinForms
     public partial class MainForm : Form
     {
         private readonly MainViewModel viewModel;
+        private readonly IVaccineUserDataProvider vaccineUserDataProvider;
 
         public MainForm()
         {
             InitializeComponent();
-            viewModel = new MainViewModel(new VaccineUserDataProvider());
+            vaccineUserDataProvider = new SQLVaccineUserDataProvider();
+            viewModel = new MainViewModel(vaccineUserDataProvider);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -61,8 +65,6 @@ namespace VaccineTrackerDemo.WinForms
                 // radioFemale.DataBindings.Add("Checked", usersBindingSource, "Gender");
 
                 btnSave.DataBindings.Add("Enabled", usersBindingSource, "CanSave");
-
-
             }
         }
 
@@ -77,24 +79,28 @@ namespace VaccineTrackerDemo.WinForms
             DialogResult result = MessageBox.Show("Do You Want to Register?", "Register", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
-                if (usersBindingSource.Current is VaccineUserViewModel vaccineUserViewModel &&
-                vaccineUserViewModel.CanSave)
-                {
-                    vaccineUserViewModel.Save();
-                }
 
-                ShowConfirmationDetailsForm();
+                var newUser = new VaccineUser()
+                {
+                    Username = txtUserName.Text,
+                    ContactNumber = txtContactNumber.Text,
+                    Gender = "Male",
+                    Address = txtAddress.Text,
+                    Age = txtAge.Text,
+                    VaccineName = txtVaccineName.Text
+                };
+
+                viewModel.Save(new VaccineUserViewModel(newUser, this.vaccineUserDataProvider));
+
+                ShowConfirmationDetailsForm(newUser);
             }
         }
 
 
-        private void ShowConfirmationDetailsForm()
+        private void ShowConfirmationDetailsForm(VaccineUser vaccineUser)
         {
-            if (usersBindingSource.Current is VaccineUserViewModel vaccineUserViewModel)
-            {
-                var confirmationForm = new ConfirmationForm(vaccineUserViewModel);
-                confirmationForm.Show();
-            }
+            var confirmationForm = new ConfirmationForm(vaccineUser);
+            confirmationForm.Show();
         }
     }
 }

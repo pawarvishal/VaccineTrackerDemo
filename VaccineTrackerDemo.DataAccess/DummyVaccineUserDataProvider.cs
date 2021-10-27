@@ -5,7 +5,7 @@ using VaccineTrackerDemo.Common.Model;
 
 namespace VaccineTrackerDemo.DataAccess
 {
-    public class VaccineUserDataProvider : IVaccineUserDataProvider
+    public class DummyVaccineUserDataProvider : IVaccineUserDataProvider
     {
         public IEnumerable<VaccineUser> LoadVaccineUsers()
         {
@@ -16,7 +16,7 @@ namespace VaccineTrackerDemo.DataAccess
                     Username = "Vishal",
                     Gender = "Male",
                     ContactNumber = "1234994509",
-                    Age = 29,
+                    Age = "29",
                     Address = "Pune",
                     VaccineName = "CoviSheild"
                 },
@@ -25,7 +25,7 @@ namespace VaccineTrackerDemo.DataAccess
                     Username = "Sam",
                     Gender = "Male",
                     ContactNumber = "1234996456",
-                    Age = 30,
+                    Age = "30",
                     Address = "Pune",
                     VaccineName = "CoviSheild"
                 },
@@ -34,8 +34,8 @@ namespace VaccineTrackerDemo.DataAccess
                     Username = "Jo",
                     Gender = "Female",
                     ContactNumber = "1749964569",
-                    Age = 32,
-                    Address = "Mumabai",
+                    Age = "32",
+                    Address = "Mumbai",
                     VaccineName = "Covaxin"
                 }
 

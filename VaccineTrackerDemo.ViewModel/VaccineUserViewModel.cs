@@ -44,7 +44,7 @@ namespace VaccineTrackerDemo.ViewModel
             }
         }
 
-        public int Age
+        public string Age
         {
             get => this.vaccineUser.Age;
             set
@@ -100,7 +100,7 @@ namespace VaccineTrackerDemo.ViewModel
 
         public bool CanSave => !string.IsNullOrEmpty(Address);
 
-        public void Save()
+        public void SaveToDB()
         {
             this.vaccineUserDataProvider.SaveUser(this.vaccineUser);
         }

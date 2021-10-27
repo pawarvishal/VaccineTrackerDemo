@@ -44,8 +44,14 @@ namespace VaccineTrackerDemo.ViewModel
             VaccineUsers.Clear();
             foreach (var user in users)
             {
-                VaccineUsers.Add(new VaccineUserViewModel(user, vaccineUserDataProvider));
+                VaccineUsers.Add(new VaccineUserViewModel(user, this.vaccineUserDataProvider));
             }
+        }
+
+        public void Save(VaccineUserViewModel vaccineUserViewModel)
+        {
+            this.VaccineUsers.Add(vaccineUserViewModel);
+            vaccineUserViewModel.SaveToDB();
         }
 
     }

@@ -14,7 +14,7 @@ namespace VaccineTrackerDemo.Common.Model
 
         public string ContactNumber { get; set; }
 
-        public int Age { get; set; }
+        public string Age { get; set; }
 
         public string VaccineName { get; set; }
 
