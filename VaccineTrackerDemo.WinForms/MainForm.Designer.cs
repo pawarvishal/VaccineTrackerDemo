@@ -52,22 +52,11 @@ namespace VaccineTrackerDemo.WinForms
             this.lblGender = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlDetails = new System.Windows.Forms.Panel();
-            this.lblRegAddress = new System.Windows.Forms.Label();
-            this.lblRegVaccineName = new System.Windows.Forms.Label();
-            this.lblRegAge = new System.Windows.Forms.Label();
-            this.lblRegContactNumber = new System.Windows.Forms.Label();
-            this.lblRegGender = new System.Windows.Forms.Label();
-            this.lblRegUsrname = new System.Windows.Forms.Label();
-            this.pnlRegister = new System.Windows.Forms.Panel();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlRefresh.SuspendLayout();
             this.pnlMainArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            this.pnlDetails.SuspendLayout();
-            this.pnlRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -146,10 +135,10 @@ namespace VaccineTrackerDemo.WinForms
             this.pnlMainArea.Controls.Add(this.lblContactNumber);
             this.pnlMainArea.Controls.Add(this.lblGender);
             this.pnlMainArea.Controls.Add(this.lblUsername);
-            this.pnlMainArea.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMainArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainArea.Location = new System.Drawing.Point(290, 125);
             this.pnlMainArea.Name = "pnlMainArea";
-            this.pnlMainArea.Size = new System.Drawing.Size(698, 693);
+            this.pnlMainArea.Size = new System.Drawing.Size(1091, 693);
             this.pnlMainArea.TabIndex = 2;
             // 
             // radioFemale
@@ -184,7 +173,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddress.Location = new System.Drawing.Point(225, 448);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(338, 36);
+            this.txtAddress.Size = new System.Drawing.Size(369, 36);
             this.txtAddress.TabIndex = 11;
             // 
             // txtVaccineName
@@ -193,7 +182,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVaccineName.Location = new System.Drawing.Point(225, 367);
             this.txtVaccineName.Name = "txtVaccineName";
-            this.txtVaccineName.Size = new System.Drawing.Size(338, 36);
+            this.txtVaccineName.Size = new System.Drawing.Size(369, 36);
             this.txtVaccineName.TabIndex = 10;
             // 
             // txtAge
@@ -202,7 +191,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAge.Location = new System.Drawing.Point(225, 286);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(338, 36);
+            this.txtAge.Size = new System.Drawing.Size(369, 36);
             this.txtAge.TabIndex = 9;
             // 
             // txtContactNumber
@@ -211,7 +200,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContactNumber.Location = new System.Drawing.Point(225, 207);
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(338, 36);
+            this.txtContactNumber.Size = new System.Drawing.Size(369, 36);
             this.txtContactNumber.TabIndex = 8;
             // 
             // txtUserName
@@ -220,7 +209,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Location = new System.Drawing.Point(225, 35);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(338, 36);
+            this.txtUserName.Size = new System.Drawing.Size(369, 36);
             this.txtUserName.TabIndex = 7;
             // 
             // btnSave
@@ -229,7 +218,7 @@ namespace VaccineTrackerDemo.WinForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Location = new System.Drawing.Point(45, 526);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(142, 50);
+            this.btnSave.Size = new System.Drawing.Size(242, 50);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -289,102 +278,11 @@ namespace VaccineTrackerDemo.WinForms
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             // 
-            // pnlDetails
-            // 
-            this.pnlDetails.Controls.Add(this.lblRegAddress);
-            this.pnlDetails.Controls.Add(this.lblRegVaccineName);
-            this.pnlDetails.Controls.Add(this.lblRegAge);
-            this.pnlDetails.Controls.Add(this.lblRegContactNumber);
-            this.pnlDetails.Controls.Add(this.lblRegGender);
-            this.pnlDetails.Controls.Add(this.lblRegUsrname);
-            this.pnlDetails.Controls.Add(this.pnlRegister);
-            this.pnlDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDetails.Location = new System.Drawing.Point(988, 125);
-            this.pnlDetails.Name = "pnlDetails";
-            this.pnlDetails.Size = new System.Drawing.Size(393, 693);
-            this.pnlDetails.TabIndex = 3;
-            // 
-            // lblRegAddress
-            // 
-            this.lblRegAddress.AutoSize = true;
-            this.lblRegAddress.Location = new System.Drawing.Point(23, 325);
-            this.lblRegAddress.Name = "lblRegAddress";
-            this.lblRegAddress.Size = new System.Drawing.Size(131, 30);
-            this.lblRegAddress.TabIndex = 6;
-            this.lblRegAddress.Text = "{{ Address }}";
-            // 
-            // lblRegVaccineName
-            // 
-            this.lblRegVaccineName.AutoSize = true;
-            this.lblRegVaccineName.Location = new System.Drawing.Point(23, 274);
-            this.lblRegVaccineName.Name = "lblRegVaccineName";
-            this.lblRegVaccineName.Size = new System.Drawing.Size(183, 30);
-            this.lblRegVaccineName.TabIndex = 5;
-            this.lblRegVaccineName.Text = "{{ VaccineName }}";
-            // 
-            // lblRegAge
-            // 
-            this.lblRegAge.AutoSize = true;
-            this.lblRegAge.Location = new System.Drawing.Point(23, 213);
-            this.lblRegAge.Name = "lblRegAge";
-            this.lblRegAge.Size = new System.Drawing.Size(92, 30);
-            this.lblRegAge.TabIndex = 4;
-            this.lblRegAge.Text = "{{ Age }}";
-            // 
-            // lblRegContactNumber
-            // 
-            this.lblRegContactNumber.AutoSize = true;
-            this.lblRegContactNumber.Location = new System.Drawing.Point(23, 162);
-            this.lblRegContactNumber.Name = "lblRegContactNumber";
-            this.lblRegContactNumber.Size = new System.Drawing.Size(213, 30);
-            this.lblRegContactNumber.TabIndex = 3;
-            this.lblRegContactNumber.Text = "{{ Contact Number }}";
-            // 
-            // lblRegGender
-            // 
-            this.lblRegGender.AutoSize = true;
-            this.lblRegGender.Location = new System.Drawing.Point(23, 108);
-            this.lblRegGender.Name = "lblRegGender";
-            this.lblRegGender.Size = new System.Drawing.Size(125, 30);
-            this.lblRegGender.TabIndex = 2;
-            this.lblRegGender.Text = "{{ Gender }}";
-            // 
-            // lblRegUsrname
-            // 
-            this.lblRegUsrname.AutoSize = true;
-            this.lblRegUsrname.Location = new System.Drawing.Point(23, 45);
-            this.lblRegUsrname.Name = "lblRegUsrname";
-            this.lblRegUsrname.Size = new System.Drawing.Size(151, 30);
-            this.lblRegUsrname.TabIndex = 1;
-            this.lblRegUsrname.Text = "{{ Username }}";
-            // 
-            // pnlRegister
-            // 
-            this.pnlRegister.Controls.Add(this.btnRegister);
-            this.pnlRegister.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegister.Location = new System.Drawing.Point(0, 372);
-            this.pnlRegister.Name = "pnlRegister";
-            this.pnlRegister.Size = new System.Drawing.Size(393, 321);
-            this.pnlRegister.TabIndex = 0;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRegister.Location = new System.Drawing.Point(23, 35);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(152, 49);
-            this.btnRegister.TabIndex = 0;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1381, 818);
-            this.Controls.Add(this.pnlDetails);
             this.Controls.Add(this.pnlMainArea);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
@@ -399,9 +297,6 @@ namespace VaccineTrackerDemo.WinForms
             this.pnlMainArea.ResumeLayout(false);
             this.pnlMainArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            this.pnlDetails.ResumeLayout(false);
-            this.pnlDetails.PerformLayout();
-            this.pnlRegister.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,15 +325,6 @@ namespace VaccineTrackerDemo.WinForms
         private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private System.Windows.Forms.Panel pnlDetails;
-        private System.Windows.Forms.Panel pnlRegister;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label lblRegAddress;
-        private System.Windows.Forms.Label lblRegVaccineName;
-        private System.Windows.Forms.Label lblRegAge;
-        private System.Windows.Forms.Label lblRegContactNumber;
-        private System.Windows.Forms.Label lblRegGender;
-        private System.Windows.Forms.Label lblRegUsrname;
     }
 }
 

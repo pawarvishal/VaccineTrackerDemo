@@ -34,9 +34,6 @@ namespace VaccineTrackerDemo.WinForms
             var areDataBindingsInitialized = txtUserName.DataBindings.Count > 0;
 
 
-            // Hide Regsiter Details, Only Show when Clicked On Save
-            HideRegisterDetailsControls();
-
             if (areDataBindingsInitialized)
             {
                 usersBindingSource.ResetBindings(false);
@@ -77,34 +74,6 @@ namespace VaccineTrackerDemo.WinForms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ShowRegisterDetailsControls();
-
-            SetRegisterControlsValues();
-        }
-
-        private void SetRegisterControlsValues()
-        {
-            lblRegUsrname.Text = txtUserName.Text;
-            lblRegGender.Text = radioMale.Text;
-            lblRegAge.Text = txtAge.Text;
-            lblRegAddress.Text = txtAddress.Text;
-            lblRegContactNumber.Text = txtContactNumber.Text;
-            lblRegVaccineName.Text = txtVaccineName.Text;
-        }
-
-        private void ShowRegisterDetailsControls()
-        {
-            btnRegister.Show();
-            lblRegAddress.Show();
-            lblRegAge.Show();
-            lblRegContactNumber.Show();
-            lblRegGender.Show();
-            lblRegVaccineName.Show();
-            lblRegUsrname.Show();
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
             DialogResult result = MessageBox.Show("Do You Want to Register?", "Register", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
@@ -114,42 +83,18 @@ namespace VaccineTrackerDemo.WinForms
                     vaccineUserViewModel.Save();
                 }
 
-                SetRegisterLablesEmpty();
-                HideRegisterDetailsControls();
                 ShowConfirmationDetailsForm();
             }
-            else
-            {
-                SetRegisterLablesEmpty();
-                HideRegisterDetailsControls();
-            }
         }
 
-        private void HideRegisterDetailsControls()
-        {
-            btnRegister.Hide();
-            lblRegAddress.Hide();
-            lblRegAge.Hide();
-            lblRegContactNumber.Hide();
-            lblRegGender.Hide();
-            lblRegVaccineName.Hide();
-            lblRegUsrname.Hide();
-        }
-
-        private void SetRegisterLablesEmpty()
-        {
-            lblRegUsrname.Text = string.Empty;
-            lblRegGender.Text = string.Empty;
-            lblRegAge.Text = string.Empty;
-            lblRegAddress.Text = string.Empty;
-            lblRegContactNumber.Text = string.Empty;
-            lblRegVaccineName.Text = string.Empty;
-        }
 
         private void ShowConfirmationDetailsForm()
         {
-            var confirmationForm = new ConfirmationForm();
-            confirmationForm.Show();
+            if (usersBindingSource.Current is VaccineUserViewModel vaccineUserViewModel)
+            {
+                var confirmationForm = new ConfirmationForm(vaccineUserViewModel);
+                confirmationForm.Show();
+            }
         }
     }
 }
