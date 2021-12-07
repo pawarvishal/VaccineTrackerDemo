@@ -2,6 +2,12 @@
 ## Problem Statement
 This project is to be able to register a user for vaccination and display appropriate steps for users to be followed during vaccination. Create a new solution with appropriate name. Add a new WinForms Project.
 
+
+## Summary
+This project contains Windows Form which accepts the basic information about the user for vaccination and saves the data in MSSQL Server database afer user confirmation.
+There is button provided to fetch all the users who have registered for vaccination.
+
+
 ## Modules
 ### Common Module
 This module contains VaccineUser Domain Model and IVaccineUserDataProvider which are used throughout the application.
