@@ -60,10 +60,6 @@ namespace VaccineTrackerDemo.WinForms
                 txtVaccineName.DataBindings.Add("Text", usersBindingSource, "VaccineName",
                     false, DataSourceUpdateMode.Never);
 
-                // radioMale.DataBindings.Add("Checked", usersBindingSource, "Gender");
-
-                // radioFemale.DataBindings.Add("Checked", usersBindingSource, "Gender");
-
                 btnSave.DataBindings.Add("Enabled", usersBindingSource, "CanSave");
             }
         }
@@ -79,12 +75,26 @@ namespace VaccineTrackerDemo.WinForms
             DialogResult result = MessageBox.Show("Do You Want to Register?", "Register", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
+                string gender = null;
+
+                if (radioMale.Checked)
+                {
+                    gender = "Male";
+                }
+                else if (radioFemale.Checked)
+                {
+                    gender = "Female";
+                }
+                else
+                {
+                    gender = "NA";
+                }
 
                 var newUser = new VaccineUser()
                 {
                     Username = txtUserName.Text,
                     ContactNumber = txtContactNumber.Text,
-                    Gender = "Male",
+                    Gender = gender,
                     Address = txtAddress.Text,
                     Age = txtAge.Text,
                     VaccineName = txtVaccineName.Text

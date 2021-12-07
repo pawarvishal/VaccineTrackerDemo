@@ -52,11 +52,13 @@ namespace VaccineTrackerDemo.WinForms
             this.lblGender = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBoxGender = new System.Windows.Forms.GroupBox();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlRefresh.SuspendLayout();
             this.pnlMainArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            this.groupBoxGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -115,14 +117,13 @@ namespace VaccineTrackerDemo.WinForms
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(120, 43);
             this.btnRefresh.TabIndex = 0;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Disaply All";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // pnlMainArea
             // 
-            this.pnlMainArea.Controls.Add(this.radioFemale);
-            this.pnlMainArea.Controls.Add(this.radioMale);
+            this.pnlMainArea.Controls.Add(this.groupBoxGender);
             this.pnlMainArea.Controls.Add(this.txtAddress);
             this.pnlMainArea.Controls.Add(this.txtVaccineName);
             this.pnlMainArea.Controls.Add(this.txtAge);
@@ -146,7 +147,7 @@ namespace VaccineTrackerDemo.WinForms
             this.radioFemale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioFemale.AutoSize = true;
-            this.radioFemale.Location = new System.Drawing.Point(359, 124);
+            this.radioFemale.Location = new System.Drawing.Point(192, 47);
             this.radioFemale.Name = "radioFemale";
             this.radioFemale.Size = new System.Drawing.Size(104, 34);
             this.radioFemale.TabIndex = 13;
@@ -159,7 +160,7 @@ namespace VaccineTrackerDemo.WinForms
             this.radioMale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioMale.AutoSize = true;
-            this.radioMale.Location = new System.Drawing.Point(225, 124);
+            this.radioMale.Location = new System.Drawing.Point(22, 47);
             this.radioMale.Name = "radioMale";
             this.radioMale.Size = new System.Drawing.Size(82, 34);
             this.radioMale.TabIndex = 12;
@@ -216,7 +217,7 @@ namespace VaccineTrackerDemo.WinForms
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(45, 526);
+            this.btnSave.Location = new System.Drawing.Point(45, 576);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(242, 50);
             this.btnSave.TabIndex = 6;
@@ -278,6 +279,17 @@ namespace VaccineTrackerDemo.WinForms
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             // 
+            // groupBoxGender
+            // 
+            this.groupBoxGender.Controls.Add(this.radioMale);
+            this.groupBoxGender.Controls.Add(this.radioFemale);
+            this.groupBoxGender.Location = new System.Drawing.Point(225, 96);
+            this.groupBoxGender.Name = "groupBoxGender";
+            this.groupBoxGender.Size = new System.Drawing.Size(397, 95);
+            this.groupBoxGender.TabIndex = 14;
+            this.groupBoxGender.TabStop = false;
+            this.groupBoxGender.Text = "Select Gender";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -297,6 +309,8 @@ namespace VaccineTrackerDemo.WinForms
             this.pnlMainArea.ResumeLayout(false);
             this.pnlMainArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            this.groupBoxGender.ResumeLayout(false);
+            this.groupBoxGender.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -325,6 +339,7 @@ namespace VaccineTrackerDemo.WinForms
         private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.BindingSource usersBindingSource;
+        private System.Windows.Forms.GroupBox groupBoxGender;
     }
 }
 
